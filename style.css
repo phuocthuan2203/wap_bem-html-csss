@@ -22,4 +22,49 @@ body > div {
     background-color: transparent;
     border: none;
     outline: none;
+    color: #fff;
+
+    /* Khi làm nút thì ko set width mà sẽ set min-width, chữ dài thì nút tự dài, chữ ngắn thì nút sẽ có min-width để ko bị co quá nhỏ */
+    min-width: 120px;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+
+    /* transition sẽ tạo 1 keyframe cho opacity, giúp cho việc làm đục trở nên mượt mà */
+    transition: opacity .2s ease;
+}
+
+.btn:hover {
+    /* 1 - 0.8 = 0.2 */
+    opacity: 0.8;
+}
+
+.btn + .btn {
+    margin-left: 16px;
+}
+
+.btn--success {
+    background-color: #71be34;    
+}
+
+.btn--warn {
+    background-color: #ff623d;
+}
+
+.btn--danger {
+    background-color: #ffb703;
+}
+
+.btn--disabled {
+    /* dùng important để bỏ đi opacity 0.8 ở phía trên */
+    opacity: 0.5 !important;
+    cursor: default;
+}
+
+.btn--size-l {
+    padding: 18px 60px;
+}
+
+.btn--size-s {
+    padding: 8px 36px;
 }
